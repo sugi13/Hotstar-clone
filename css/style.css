@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400&display=swap');
+
+html{
+    background-color: rgb(16, 14, 37);
+    color:  white;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.brand img{
+    width: 10%;
+    text-align: center;
+    margin: 20px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+}
+.brand p{
+    padding: 20px;
+    font-weight: 600;
+}
+
+.image img{
+    width: 120px;
+    height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    transition: transform .4s linear;
+    cursor: pointer;
+}
+img:hover{
+    transform: scale(1.5);
+}
+.container-1, .container-2, .container-3, .container-4, .container-5{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin: 10px;
+    padding: 10px;
+    font-weight: 900;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+h1:hover{
+    color:rgb(95, 95, 243);
+}
+
+.img{
+    margin: 5px;
+}
