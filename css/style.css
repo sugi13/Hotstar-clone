@@ -3,28 +3,75 @@
 html{
     background-color: rgb(16, 14, 37);
     color:  white;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     margin: 0;
     padding: 0;
 }
-
-.brand img{
-    width: 10%;
-    text-align: center;
-    margin: 20px;
+.header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 25px;
+   height:auto;
 }
-.brand {
-    display: flex;
+.header-content-1{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+}
+.header-content-1 ul {
+    display: flex;
+}
+.header-content-1 ul li {
+    list-style-type: none;
+    margin: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform .3s linear;
+}
+li:nth-child(5){
+    color: orange;
+    font-weight: bold;
+}
+li:hover{
+    transform: translateY(-5px);
+    text-decoration: underline;
+}
+
+.header-content-2{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+.header-content-2 #Input-field{
+    min-width: 100%;
     font-size: 1.2rem;
+    padding: 5px;
+    background-color: rgb(16, 14, 37);
+    border-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     color: white;
 }
-.brand p{
-    padding: 20px;
-    font-weight: 600;
+#Input-field:focus{
+    outline: none;
 }
+
+button{
+    padding: 10px;
+    background-color: rgb(62, 62, 241);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+}
+
 
 .image img{
     width: 120px;
@@ -43,7 +90,7 @@ img:hover{
 .container-1, .container-2, .container-3, .container-4, .container-5{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
+} 
 h1{
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
