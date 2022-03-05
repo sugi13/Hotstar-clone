@@ -71,8 +71,6 @@ button{
     border: none;
     border-radius: 10px;
 }
-
-
 .image img{
     width: 120px;
     height: 200px;
@@ -84,9 +82,10 @@ button{
     transition: transform .4s linear;
     cursor: pointer;
 }
-img:hover{
+.image img:hover{
     transform: scale(1.5);
 }
+
 .container-1, .container-2, .container-3, .container-4, .container-5{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -106,4 +105,28 @@ h1:hover{
 
 .img{
     margin: 5px;
+    display: flex;
+}
+.img img{
+    width: 100%;
+}
+
+/* aside */
+
+.img-slide img{
+    width:100%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-container{
+    display: flex;
+    transition: display 2s linear;
+}
+#prev, #next{
+    margin: 50px;
+    background: none;
+    font-size: 3.4rem;
 }
