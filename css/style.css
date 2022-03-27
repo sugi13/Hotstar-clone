@@ -16,15 +16,16 @@ body{
    margin: 25px;
    height:auto;
 }
-.header-content-1{
+.header-content-1 {
     display: grid;
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: repeat(2, 2fr);
     align-items: center;
 }
+
 .header-content-1 ul {
     display: flex;
 }
-.header-content-1 ul li {
+.header-content-1 li {
     list-style-type: none;
     margin: 15px;
     font-weight: 500;
@@ -39,24 +40,17 @@ li:hover{
     transform: translateY(-5px);
     text-decoration: underline;
 }
-
-.header-content-2{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 20px;
-}
-.header-content-2 #Input-field{
-    min-width: 100%;
-    font-size: 1.2rem;
-    padding: 5px;
-    background-color: rgb(16, 14, 37);
-    border-color: white;
+#Input-field{
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size:1rem;
     border-top: none;
-    border-left: none;
-    border-right: none;
+    background-color: rgb(16, 14, 37);
     color: white;
+    border-right: none;
+    border-left: none;
 }
+
 #Input-field:focus{
     outline: none;
 }
@@ -70,6 +64,42 @@ button{
     text-transform: uppercase;
     border: none;
     border-radius: 10px;
+    margin: 10px;
+}
+#Menu-btn{
+    font-size: 2.4rem;
+    display: none;
+}
+
+
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin: 10px;
+    padding: 10px;
+    font-weight: 900;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+h1:hover{
+    color:rgb(95, 95, 243);
+}
+/* slide */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-container{
+    display: flex;
+    transition: display 2s linear;
+}
+#prev, #next{
+    margin: 50px;
+    background: none;
+    font-size: 3.4rem;
 }
 .image img{
     width: 120px;
@@ -90,43 +120,122 @@ button{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 } 
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    margin: 10px;
-    padding: 10px;
-    font-weight: 900;
-    text-transform: capitalize;
+
+
+
+footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(1, 1, 49);
+}
+footer ul {
+    display: flex;
+}
+footer ul li {
+    list-style-type: none;
+    margin: 20px;
+    color: grey;
+}
+footer ul li:hover{
+    color: white;
     cursor: pointer;
 }
-h1:hover{
-    color:rgb(95, 95, 243);
+footer p{
+    margin-left: 60px;
 }
-
-.img{
-    margin: 5px;
+.footer-container-2{
+    text-align: center;
+}
+.footer-container-2 span{
+    font-size: 2.3rem;
+    padding: 5px;
+}
+.footer-container-2 span:hover{
+    width: 100%;    
+    background-color: rgb(76, 76, 247);
+}
+.footer-container-3{
     display: flex;
-}
-.img img{
-    width: 100%;
-}
-
-/* aside */
-
-.img-slide img{
-    width:100%;
-}
-.container{
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-.img-container{
-    display: flex;
-    transition: display 2s linear;
+.footer-container-3 img{
+    padding: 10px;
 }
-#prev, #next{
-    margin: 50px;
-    background: none;
-    font-size: 3.4rem;
+
+/* media query */
+@media screen and (max-width: 578px) {
+    .header-content-1{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        align-items: center;
+        position: relative;
+    }
+    #Menu-btn{
+        display: block;
+        font-size: 1.4rem;
+    }
+    .header-content-1 ul{
+         width: auto;
+         height: auto;
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         background-color: black;
+         align-items: center;
+         padding: 20px;
+         margin: 20px;
+         position: absolute;
+         left: 60px;
+         top: 10px;
+         z-index: 1;
+         display: none;
+    }
+    .header-content-1 li{
+        cursor: none;
+        padding: 20px;
+    }
+    #Input-field{
+        width: auto;
+        position: relative;
+        left: -5px;
+        background-color: black;
+        margin: 10px;
+    }
+    #prev, #next{
+        font-size:1rem;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-slide{
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .img-slide img{
+        width: 100%;
+    }
+    .container-1, .container-2, .container-3, .container-4, .container-5{
+        gap: 20px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: column;
+    }
+    footer p{
+        text-align: left;
+        opacity: .7;
+    }
 }

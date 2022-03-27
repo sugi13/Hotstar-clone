@@ -9,8 +9,30 @@ let ContainerFive = document.querySelector(".container-5");
 let imageSlides = document.querySelectorAll(".img-slide");
 let NextButton = document.querySelector("#next");
 let PreviousButton = document.querySelector('#prev');
+let MenuContainer = document.getElementById("Menu");
+let MenuButton = document.getElementById("Menu-btn")
 
 let currentIndex = 0;
+
+// Toggle Menu //
+
+function ToggleMenu(){
+   if(MenuContainer.style.display == "block"){
+       MenuContainer.style.display = "none";
+   }
+   else {
+       MenuContainer.style.display = "block";
+   }
+}
+MenuButton.addEventListener("click", ToggleMenu);
+
+
+
+
+
+
+
+
 
 // slide function //
 
